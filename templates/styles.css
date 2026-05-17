@@ -36,3 +36,7 @@ body {
     text-decoration: underline;
     color: white;
 }
+
+.titles:hover {
+    color: lightblue;
+}
