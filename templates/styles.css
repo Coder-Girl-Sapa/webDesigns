@@ -12,6 +12,11 @@ body {
 }
 
 .container {
+    position: fixed;
+    top: 10px;
+    left: 0px;
+    width: 100%;
+
     display: flex;
     justify-content: center;
     gap: 300px;
