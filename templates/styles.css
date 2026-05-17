@@ -11,8 +11,14 @@ body {
     border: 10px solid #000000;
 }
 
-#container {
+.container {
     display: flex;
     justify-content: center;
     gap: 300px;
+    font-size: 24px;
+}
+
+.titles {
+    text-decoration: underline;
+    color: white;
 }
