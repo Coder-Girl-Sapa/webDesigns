@@ -40,3 +40,98 @@ body {
 .titles:hover {
     color: lightblue;
 }
+
+body {
+  margin: 0;
+  background-color: #15151E;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  color: white;
+}
+
+body.glitch-active {
+  background: white;
+  color: black;
+}
+
+body.glitch-active .hero {
+  background: white;
+}
+
+body.glitch-active .titles {
+  color: black;
+}
+
+.hero {
+  height: 80vh;
+  margin: 95px 30px 0;
+  border: 15px solid black;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: #15151E;
+}
+
+body.glitch-active .hero {
+  border-color: white;
+}
+
+.glitch {
+  position: relative;
+  font-size: 6rem;
+  color: white;
+  cursor: pointer;
+  user-select: none;
+}
+
+body.glitch-active .glitch {
+  color: black;
+  animation: glitchMove 0.35s steps(2, end);
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  color: black;
+}
+
+body.glitch-active .glitch::before,
+body.glitch-active .glitch::after {
+  opacity: 1;
+}
+
+body.glitch-active .glitch::before {
+  clip-path: inset(0 0 55% 0);
+  animation: sliceUp 0.35s steps(2, end);
+}
+
+body.glitch-active .glitch::after {
+  clip-path: inset(55% 0 0 0);
+  animation: sliceDown 0.35s steps(2, end);
+}
+
+@keyframes glitchMove {
+  0% { transform: translateY(0); }
+  20% { transform: translateY(-6px); }
+  40% { transform: translateY(5px); }
+  60% { transform: translateY(-3px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes sliceUp {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(-18px); }
+  50% { transform: translateY(10px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes sliceDown {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(16px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
