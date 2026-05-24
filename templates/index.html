@@ -9,13 +9,13 @@
 <body>
 
     <div class="container">
-        <a href="blog.html" class="titles">BLOG</a>
-        <a href="writing.html" class="titles">WRITING</a>
-        <a href="projects.html" class="titles">PROJECTS</a>
+        <a onclick="playThenGo('sounds/button_click.mp3', event, 'blog.html')" onmouseenter="playSound('sounds/button.mp3')"  href="blog.html" class="titles">BLOG</a>
+        <a onclick="playThenGo('sounds/button_click.mp3', event, 'writing.html')" onmouseenter="playSound('sounds/button.mp3')"  href="writing.html" class="titles">WRITING</a>
+        <a onclick="playThenGo('sounds/button_click.mp3', event, 'projects.html')" onmouseenter="playSound('sounds/button.mp3')"  href="projects.html" class="titles">PROJECTS</a>
     </div>
 
     <div class="hero" id="hero">
-        <h1 class="glitch" data-text="SAPA NGUYEN">
+        <h1 onclick="playSound('sounds/glitch.mp3')" class="glitch" data-text="SAPA NGUYEN">
             SAPA NGUYEN
         </h1>
     </div>
